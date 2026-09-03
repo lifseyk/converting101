@@ -27,13 +27,14 @@ jobs:
 
       # Uploads the contents of ./out/ to the subdomain's document root on Bluehost.
       # Only changed files are transferred after the first run.
-      - name: Deploy over FTPS
+      - name: Deploy over FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          port: 21
+          protocol: ftp
           local-dir: ./out/
           # Change this to match the subdomain's actual document root in cPanel
           server-dir: /public_html/converting/
