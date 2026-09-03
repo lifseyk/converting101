@@ -36,4 +36,4 @@ jobs:
           protocol: ftps
           local-dir: ./out/
           # Change this to match the subdomain's actual document root in cPanel
-          server-dir: /public_html/converting101/
+          server-dir: /public_html/converting/
