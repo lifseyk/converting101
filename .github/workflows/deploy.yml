@@ -36,5 +36,5 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./out/
-          # Change this to match the subdomain's actual document root in cPanel
-          server-dir: /public_html/converting/
+          # This FTP account's home directory is already the subdomain's document root
+          server-dir: /
